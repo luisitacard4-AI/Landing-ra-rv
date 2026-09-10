@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landing page de Realidad Aumentada (RA), Virtual (RV) y Mixta (RM) aplicada a la Ingeniería de Alimentos. Enfoque profesional y estudiantil con gemelos digitales y simulación interactiva.">
+  <meta name="keywords" content="Realidad Aumentada, Realidad Virtual, Realidad Mixta, Ingeniería de Alimentos, Gemelos Digitales, Pasteurización, HACCP, Simulación Inmersiva">
+  <title>XR Food Engineering | Realidades Inmersivas en Ingeniería de Alimentos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- BARRA MÓVIL SUPERIOR -->
+  <header class="mobile-nav-bar">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <div class="brand-badge" style="width: 34px; height: 34px;">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3 style="font-size: 0.95rem;">XR FoodTech</h3>
+    </div>
+    <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Abrir Menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </header>
+
+  <div class="app-container">
+    
+    <!-- MENÚ LATERAL IZQUIERDO (SIDEBAR) -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-header">
+          <div class="brand-badge">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h2>XR FoodTech</h2>
+            <span>Alimentos 4.0</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#inicio" class="nav-link active">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Inicio</span>
+          </a>
+
+          <a href="#tecnologias" class="nav-link">
+            <svg viewBox="0 0 24 24">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span>Tecnologías XR</span>
+            <span class="nav-badge">RA·RV·RM</span>
+          </a>
+
+          <a href="#vida-profesional" class="nav-link">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Vida Profesional</span>
+          </a>
+
+          <a href="#vida-estudiantil" class="nav-link">
+            <svg viewBox="0 0 24 24">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>Vida Estudiantil</span>
+          </a>
+
+          <a href="#calculadora" class="nav-link">
+            <svg viewBox="0 0 24 24">
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <line x1="8" y1="6" x2="16" y2="6"></line>
+              <line x1="16" y1="14" x2="16" y2="18"></line>
+              <path d="M16 10h.01"></path>
+              <path d="M12 10h.01"></path>
+              <path d="M8 10h.01"></path>
+              <path d="M12 14h.01"></path>
+              <path d="M8 14h.01"></path>
+              <path d="M12 18h.01"></path>
+              <path d="M8 18h.01"></path>
+            </svg>
+            <span>Calculadora XR</span>
+            <span class="nav-badge">JS</span>
+          </a>
+
+          <a href="#gamificacion" class="nav-link">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+              <path d="M6 12h4m-2-2v4m10-2h.01m-3-1h.01m0 2h.01"></path>
+            </svg>
+            <span>Simulador HACCP</span>
+            <span class="nav-badge">Juego</span>
+          </a>
+
+          <a href="#recursos" class="nav-link">
+            <svg viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Ecosistema & Stack</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- FOOTER DEL SIDEBAR -->
+      <div class="sidebar-footer">
+        <!-- Switcher Modo Claro/Oscuro -->
+        <div class="theme-switch-wrapper">
+          <div class="theme-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <span id="current-theme-name">Modo Oscuro</span>
+          </div>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Alternar Modo Claro y Oscuro">
+            <div class="theme-toggle-thumb">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <!-- Perfil Estudiante / Ingeniero -->
+        <div class="user-card">
+          <div class="user-avatar">IA</div>
+          <div class="user-info">
+            <h4>Estudiante Ing. Alimentos</h4>
+            <span>Investigador XR Conectado</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      
+      <!-- SECCIÓN HERO -->
+      <section id="inicio" class="hero-section">
+        <div class="hero-content">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span>Convergencia Tecnológica 4.0</span>
+          </div>
+
+          <h1>Realidades Inmersivas en la <span class="gradient-text">Ingeniería de Alimentos</span></h1>
+          
+          <p>
+            Descubre cómo la <strong>Realidad Aumentada (RA)</strong>, <strong>Realidad Virtual (RV)</strong> y <strong>Realidad Mixta (RM)</strong> transforman las plantas industriales, los gemelos digitales térmicos y la formación de futuros ingenieros sin desperdicio de materia prima.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#calculadora" class="btn btn-primary">
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+              </svg>
+              <span>Explorar Calculadora Térmica</span>
+            </a>
+            <a href="#gamificacion" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+              </svg>
+              <span>Iniciar Simulador HACCP</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>-45%</h3>
+              <p>Reducción en mermas por entrenamiento en laboratorio virtual</p>
+            </div>
+            <div class="stat-item">
+              <h3>99.9%</h3>
+              <p>Conformidad microbiológica validada con Gemelos Digitales</p>
+            </div>
+            <div class="stat-item">
+              <h3>0 Riesgos</h3>
+              <p>Seguridad absoluta en simulación de vapor y presión</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hud-image-wrapper">
+            <img src="assets/images/xr-professional-plant.jpg" alt="Ingeniera de Alimentos usando Realidad Aumentada frente a un pasteurizador HTST con gemelo digital térmico">
+            <div class="hud-overlay-card">
+              <div class="hud-status-indicator">
+                <div class="pulse-dot"></div>
+                <div class="hud-status-text">
+                  <h4>Gemelo Digital HTST Activo</h4>
+                  <p>Telemetría en tiempo real: 72.1°C - 74.3°C</p>
+                </div>
+              </div>
+              <span class="tech-pill pill-cyan">AR LIVE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN TECNOLOGÍAS (RA vs RV vs RM) -->
+      <section id="tecnologias">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Ecosistema Inmersivo</span>
+        </div>
+        <h2 class="section-title">El Espectro de la Realidad Extendida (XR)</h2>
+        <p class="section-subtitle">
+          Cada tecnología inmersiva tiene un papel específico y complementario dentro de la industria agroalimentaria y la academia.
+        </p>
+
+        <div class="xr-grid">
+          <!-- RA -->
+          <div class="glass-card xr-card">
+            <div class="xr-badge-header">
+              <span class="tech-pill pill-cyan">RA · Realidad Aumentada</span>
+              <div class="xr-icon-svg">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3m18 8v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+            </div>
+            <h3>Superposición de Datos en Entornos Reales</h3>
+            <p>
+              Proyecta capas de información analítica (temperaturas de intercambiadores, curvas de letalidad y estatus HACCP) directamente sobre las máquinas y empaques físicos del operador.
+            </p>
+            <ul class="xr-feature-list">
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Inspección visual de sellado y lote en línea</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Guías paso a paso para sanitización CIP</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Lectura de sensores IoT mediante códigos QR o tags NFC</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- RV -->
+          <div class="glass-card xr-card">
+            <div class="xr-badge-header">
+              <span class="tech-pill pill-emerald">RV · Realidad Virtual</span>
+              <div class="xr-icon-svg">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M6 12c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3>Inmersión Total en Plantas Virtuales</h3>
+            <p>
+              Aísla los sentidos para sumergir al estudiante o profesional en un gemelo 3D de alta fidelidad: calderas de vapor a alta presión, cámaras frigoríficas o plantas asépticas completas.
+            </p>
+            <ul class="xr-feature-list">
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Entrenamiento en emergencias y fuga de amoníaco</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Exploración molecular 3D de micelas de caseína</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Operación virtual de autoclaves industriales sin riesgo</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- RM -->
+          <div class="glass-card xr-card">
+            <div class="xr-badge-header">
+              <span class="tech-pill pill-violet">RM · Realidad Mixta</span>
+              <div class="xr-icon-svg">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3>Interacción Oclusión-Mundo en Tiempo Real</h3>
+            <p>
+              Fusiona objetos físicos y digitales donde los hologramas pueden anclarse y responder a la geometría espacial del laboratorio, permitiendo manipular válvulas virtuales sobre tuberías físicas.
+            </p>
+            <ul class="xr-feature-list">
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Auditorías con anclaje espacial de reportes HACCP</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Manipulación gestual de biorreactores piloto</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Tele-asistencia remota entre planta y expertos externos</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN VIDA PROFESIONAL -->
+      <section id="vida-profesional" class="split-section">
+        <div>
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Impacto en la Industria 4.0</span>
+          </div>
+          <h2 class="section-title">El Ingeniero de Alimentos en la Era Inmersiva</h2>
+          <p class="section-subtitle" style="margin-bottom: 2rem;">
+            En la vida profesional, la Realidad Extendida deja de ser una novedad visual y se convierte en una herramienta decisiva para garantizar la inocuidad alimentaria, reducir paradas no programadas y validar balances de materia y energía.
+          </p>
+
+          <div class="feature-cards-stack">
+            <div class="feature-mini-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Gemelos Digitales Térmicos (Digital Twins)</h4>
+                <p>Monitoreo holográfico de gradientes de temperatura en pasteurizadores tubulares y de placas para prevenir sub-procesamiento y destrucción de valor nutricional.</p>
+              </div>
+            </div>
+
+            <div class="feature-mini-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Inspección Aséptica y Control de Calidad</h4>
+                <p>Verificación visual aumentada de la hermeticidad del termosellado en envases multicapa (Tetra Pak), detectando microfugas antes de la distribución masiva.</p>
+              </div>
+            </div>
+
+            <div class="feature-mini-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Mantenimiento Higiénico Predictivo</h4>
+                <p>Los técnicos visualizan diagramas de flujo de fluidos, presiones de bombas y ciclos de lavado CIP (Cleaning In Place) sin abrir equipos en zonas estériles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="image-frame">
+            <img src="assets/images/xr-packaging-inspection.jpg" alt="Inspección de calidad con Realidad Mixta en envases asépticos con micro-sensores holográficos">
+            <div class="image-badge-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Control HACCP en Vivo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN VIDA ESTUDIANTIL -->
+      <section id="vida-estudiantil" class="split-section split-reverse">
+        <div>
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>La Perspectiva del Estudiante</span>
+          </div>
+          <h2 class="section-title">Aprender Ingeniería sin Barreras ni Desperdicio</h2>
+          <p class="section-subtitle" style="margin-bottom: 2rem;">
+            Como estudiante de ingeniería de alimentos, la Realidad Extendida democratiza el acceso a laboratorios y plantas piloto complejas desde cualquier lugar, permitiendo equivocarse y aprender sin peligro.
+          </p>
+
+          <div class="feature-cards-stack">
+            <div class="feature-mini-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Cero Mermas de Materia Prima</h4>
+                <p>Simular corridas enteras de fermentación, ultrafiltración o deshidratación por aspersión sin desechar litros de leche, fruta o reactivos costosos.</p>
+              </div>
+            </div>
+
+            <div class="feature-mini-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Entrenamiento de Alto Riesgo 100% Seguro</h4>
+                <p>Manipulación didáctica de vapor vivo a 4 bar, calderas, prensas y autoclaves donde un error operativo no ocasiona quemaduras ni accidentes físicos.</p>
+              </div>
+            </div>
+
+            <div class="feature-mini-card">
+              <div class="feature-icon-box">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <circle cx="19" cy="5" r="2"></circle>
+                  <circle cx="5" cy="19" r="2"></circle>
+                  <path d="M10.4 10.4L6.4 17.6M13.6 13.6l4-7.2"></path>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Microbiología & Química Molecular en 3D</h4>
+                <p>Ver en escala macromolecular cómo interactúan las proteínas de suero, cómo se desestabiliza una emulsión o cómo el calor desnaturaliza el ADN bacteriano.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="image-frame">
+            <img src="assets/images/xr-student-lab.jpg" alt="Estudiante de ingeniería de alimentos usando visor de realidad virtual para estudiar micelas de caseína y biorreactores en 3D">
+            <div class="image-badge-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              </svg>
+              <span>Laboratorio Virtual UCD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN CALCULADORA JAVASCRIPT -->
+      <section id="calculadora">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+          </svg>
+          <span>Herramienta Interactiva</span>
+        </div>
+        <h2 class="section-title">Calculadora de Cinética Térmica & Gemelos Virtuales</h2>
+        <p class="section-subtitle">
+          Determina en tiempo real el valor de letalidad acumulada ($F_0$), el nuevo valor $D_T$ a la temperatura de operación y el número de reducciones logarítmicas alcanzadas para alimentar el gemelo digital en RA.
+        </p>
+
+        <div class="calculator-wrapper">
+          <!-- Controles de Entrada -->
+          <div class="glass-card calculator-controls">
+            <div class="presets-container">
+              <span class="presets-label">Presets Industriales Preconfigurados:</span>
+              <div class="preset-buttons">
+                <button class="btn-preset active" data-preset="htst_milk">Pasteurización Leche (HTST)</button>
+                <button class="btn-preset" data-preset="canning_botulinum">Esterilización Botulismo (12D)</button>
+                <button class="btn-preset" data-preset="citrus_juice">Jugo Cítrico (85°C)</button>
+                <button class="btn-preset" data-preset="thermization">Termización Preliminar</button>
+              </div>
+            </div>
+
+            <!-- Input Temperatura -->
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="calc-temp-range">Temperatura de Proceso ($T$):</label>
+                <span class="calc-value-display"><span id="calc-temp-display-val">72</span> °C</span>
+              </div>
+              <input type="range" id="calc-temp-range" min="50" max="145" step="0.5" value="72">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.25rem;">
+                <span style="font-size: 0.72rem; color: var(--text-muted);">Ajuste fino manual (°C):</span>
+                <input type="number" id="calc-temp-num" min="50" max="145" step="0.1" value="72" style="width: 90px; text-align: right;">
+              </div>
+            </div>
+
+            <!-- Input Tiempo -->
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="calc-time-range">Tiempo de Retención ($t$):</label>
+                <span class="calc-value-display"><span id="calc-time-display-val">15</span></span>
+              </div>
+              <input type="range" id="calc-time-range" min="1" max="120" step="1" value="15">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.25rem;">
+                <span style="font-size: 0.72rem; color: var(--text-muted);">Unidad de tiempo:</span>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                  <input type="number" id="calc-time-num" min="0.1" max="600" step="0.5" value="15" style="width: 80px; text-align: right;">
+                  <select id="calc-time-unit" style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); color: var(--text-primary); border-radius: var(--radius-sm); padding: 0.45rem 0.6rem; font-size: 0.82rem;">
+                    <option value="s" selected>Segundos (s)</option>
+                    <option value="m">Minutos (min)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Parámetros Cinéticos Avanzados -->
+            <div class="input-row">
+              <div class="calc-input-group">
+                <label style="font-size: 0.8rem; font-weight: 600;">Valor $z$ del patógeno (°C):</label>
+                <input type="number" id="calc-z-val" min="1" max="30" step="0.1" value="5.5">
+                <span style="font-size: 0.7rem; color: var(--text-muted);">Sensibilidad térmica del microorganismo</span>
+              </div>
+
+              <div class="calc-input-group">
+                <label style="font-size: 0.8rem; font-weight: 600;">Valor $D_{ref}$ base (min):</label>
+                <input type="number" id="calc-d-ref" min="0.001" max="10" step="0.005" value="0.02">
+                <span style="font-size: 0.7rem; color: var(--text-muted);">Tiempo decimal a $T_{ref}$</span>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="calc-input-group">
+                <label style="font-size: 0.8rem; font-weight: 600;">Temp. de Referencia $T_{ref}$ (°C):</label>
+                <input type="number" id="calc-t-ref" min="50" max="130" step="0.1" value="71.1">
+              </div>
+
+              <div class="calc-input-group">
+                <label style="font-size: 0.8rem; font-weight: 600;">Reducción Meta (Log D):</label>
+                <input type="number" id="calc-target-log" min="1" max="18" step="1" value="6">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tablero de Resultados & Gemelo Digital -->
+          <div class="calc-results-card">
+            <div class="calc-results-header">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                </svg>
+                <span>Diagnóstico del Gemelo</span>
+              </h3>
+              <span class="status-badge status-optimal" id="res-status-badge">Tratamiento Óptimo</span>
+            </div>
+
+            <div class="metrics-dashboard">
+              <div class="metric-box">
+                <div class="metric-title">Valor $D_T$ Actual</div>
+                <div class="metric-val"><span id="res-dt">0.014</span><span class="metric-unit">min</span></div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-title">Tasa de Letalidad ($L$)</div>
+                <div class="metric-val"><span id="res-l">1.46</span><span class="metric-unit">min/min</span></div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-title">Reducción Logarítmica</div>
+                <div class="metric-val"><span id="res-log-red" style="color: var(--accent-cyan);">18.2</span><span class="metric-unit">D</span></div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-title">Retención Nutricional</div>
+                <div class="metric-val"><span id="res-nutrient" style="color: var(--accent-emerald);">94%</span></div>
+              </div>
+            </div>
+
+            <!-- Barra de Progreso de Inocuidad -->
+            <div style="margin-bottom: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 0.4rem; color: var(--text-muted);">
+                <span>Cumplimiento del Criterio Aséptico</span>
+                <span>Objetivo: Inactivación Total</span>
+              </div>
+              <div style="height: 8px; background: var(--bg-surface-elevated); border-radius: var(--radius-full); overflow: hidden;">
+                <div id="res-lethality-bar" style="height: 100%; width: 100%; background: linear-gradient(90deg, var(--accent-emerald), var(--accent-cyan)); transition: width 0.3s ease;"></div>
+              </div>
+            </div>
+
+            <!-- Feed Telemetría XR -->
+            <div class="xr-twin-feed">
+              <div class="xr-twin-feed-header">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="12 8 8 12 12 16 12 8" fill="currentColor"></polygon>
+                  </svg>
+                  Recomendación HoloLens / XR
+                </span>
+                <span style="font-size: 0.65rem; color: var(--text-muted);">SYNCHRONIZED</span>
+              </div>
+              <p id="res-twin-rec">
+                PARÁMETROS ASÉPTICOS CONFIRMADOS: Esterilidad comercial garantizada. Balance organoléptico y nutricional ideal. Gemelo digital listo para transferir receta al PLC de planta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN GAMIFICACIÓN: SIMULADOR HACCP XR -->
+      <section id="gamificacion">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+            <path d="M6 12h4m-2-2v4m10-2h.01m-3-1h.01m0 2h.01"></path>
+          </svg>
+          <span>Simulador Inmersivo Gamificado</span>
+        </div>
+        <h2 class="section-title">Inspector XR: Auditoría de Calidad en Línea</h2>
+        <p class="section-subtitle">
+          Ponte en la piel de un Ingeniero de Alimentos usando visor de Realidad Aumentada sobre la línea de envasado continuo. Analiza los datos holográficos de cada lote y toma decisiones críticas antes de que termine el tiempo.
+        </p>
+
+        <div class="game-container">
+          <!-- HUD Header de Estadísticas -->
+          <div class="game-hud-top">
+            <div class="game-hud-stat">
+              <span class="game-stat-label">Puntaje / XP</span>
+              <span class="game-stat-value" id="game-score">0 XP</span>
+            </div>
+
+            <div class="game-hud-stat">
+              <span class="game-stat-label">Racha Aséptica</span>
+              <span class="game-stat-value" id="game-streak">0x</span>
+            </div>
+
+            <div class="game-hud-stat">
+              <span class="game-stat-label">Precisión HACCP</span>
+              <span class="game-stat-value" id="game-accuracy">100%</span>
+            </div>
+
+            <div class="game-hud-stat">
+              <span class="game-stat-label">Rango Profesional</span>
+              <span class="game-stat-value" id="game-rank" style="color: var(--accent-emerald);">Trainee XR en Inocuidad</span>
+            </div>
+          </div>
+
+          <!-- Viewport del Escáner HUD -->
+          <div class="game-viewport">
+            <div class="hud-grid-overlay"></div>
+            <div class="hud-scanner-line"></div>
+
+            <div class="batch-inspector-stage">
+              <div class="batch-model-card" id="batch-card-target">
+                <div class="batch-header">
+                  <span class="batch-id" id="batch-id-display">LOT-7492-XR</span>
+                  <span class="tech-pill pill-cyan">SENSOR SCAN</span>
+                </div>
+
+                <h3 class="batch-product-name" id="batch-name-display">Leche Entera UHT (Aseptic Pack)</h3>
+
+                <div class="sensor-telemetry-grid">
+                  <div class="telemetry-cell">
+                    <div class="telemetry-label">Temp. Retención</div>
+                    <div class="telemetry-val telemetry-normal" id="batch-temp-display">138.2°C</div>
+                  </div>
+                  <div class="telemetry-cell">
+                    <div class="telemetry-label">pH Producto</div>
+                    <div class="telemetry-val telemetry-normal" id="batch-ph-display">6.68</div>
+                  </div>
+                  <div class="telemetry-cell">
+                    <div class="telemetry-label">Sellado Lámina</div>
+                    <div class="telemetry-val telemetry-normal" id="batch-seal-display">99.7%</div>
+                  </div>
+                </div>
+
+                <div class="hud-alert-banner" id="batch-alert-banner">
+                  Presiona "Comenzar Auditoría Virtual" para iniciar
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barra de Controles y Temporizador -->
+          <div class="game-controls-bar">
+            <div class="game-timer-container">
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.3rem;">
+                <span>Ventana de Reacción en Línea</span>
+                <span>PCC Monitor</span>
+              </div>
+              <div class="game-timer-bar">
+                <div class="game-timer-fill" id="game-timer-fill"></div>
+              </div>
+            </div>
+
+            <div class="game-action-buttons">
+              <button class="btn btn-primary" id="btn-game-start">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"></polygon>
+                </svg>
+                <span>Comenzar Auditoría Virtual</span>
+              </button>
+
+              <button class="btn btn-emerald" id="btn-game-approve" disabled>
+                <svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Aprobar Lote Inocuo</span>
+              </button>
+
+              <button class="btn btn-rose" id="btn-game-reject" disabled>
+                <svg viewBox="0 0 24 24">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span>Desviar a Cuarentena</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN RECURSOS & STACK TECNOLÓGICO -->
+      <section id="recursos">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          <span>Ecosistema & Badges</span>
+        </div>
+        <h2 class="section-title">Arquitectura Tecnológica del Proyecto</h2>
+        <p class="section-subtitle">
+          Construido con estándares web modernos, modularidad en carpeta <code>assets/</code> y conexión con librerías de cálculo científico.
+        </p>
+
+        <div class="tech-stack-container">
+          <div class="badges-showcase">
+            <!-- Badge Python azul explícito como solicitado -->
+            <div class="badge-item badge-python">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm-1.5 3.75c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm6 15c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zM12 20.25c-4.556 0-8.25-3.694-8.25-8.25S7.444 3.75 12 3.75s8.25 3.694 8.25 8.25-3.694 8.25-8.25 8.25z"/>
+              </svg>
+              <span>Python 3.11+ (Cálculo & Modelado)</span>
+            </div>
+
+            <div class="badge-item">
+              <svg viewBox="0 0 24 24" fill="#e34f26">
+                <path d="M1.5 0h21l-1.91 21.49L12 24l-8.59-2.51L1.5 0z"/>
+              </svg>
+              <span>HTML5 Semántico</span>
+            </div>
+
+            <div class="badge-item">
+              <svg viewBox="0 0 24 24" fill="#1572b6">
+                <path d="M1.5 0h21l-1.91 21.49L12 24l-8.59-2.51L1.5 0z"/>
+              </svg>
+              <span>Vanilla CSS3 & Tokens</span>
+            </div>
+
+            <div class="badge-item">
+              <svg viewBox="0 0 24 24" fill="#f7df1e">
+                <path d="M0 0h24v24H0V0zm22.034 18.268l-1.87-1.127c-.495.825-1.11 1.408-2.008 1.408-1.077 0-1.745-.63-1.745-1.503v-.025c0-.987.65-1.467 2.158-2.07l.617-.25c2.327-.945 3.442-2.18 3.442-4.422v-.025c0-2.613-2.062-4.52-5.263-4.52-2.825 0-4.665 1.49-5.46 3.11l1.83 1.155c.48-.96 1.34-1.75 2.607-1.75 1.495 0 2.215.75 2.215 1.58v.024c0 .87-.665 1.378-2.13 1.983l-.617.25c-2.45.99-3.52 2.3-3.52 4.498v.025c0 2.87 2.28 4.7 5.753 4.7 2.76 0 4.67-1.39 5.588-3.085z"/>
+              </svg>
+              <span>JavaScript ES6+</span>
+            </div>
+
+            <div class="badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+              </svg>
+              <span>SVG Vector Graphics</span>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Integración Python -->
+          <div class="python-callout">
+            <div class="python-callout-header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#3776ab">
+                <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm-1.5 3.75c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm6 15c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zM12 20.25c-4.556 0-8.25-3.694-8.25-8.25S7.444 3.75 12 3.75s8.25 3.694 8.25 8.25-3.694 8.25-8.25 8.25z"/>
+              </svg>
+              <h4>¿Por qué Python en el ecosistema XR de Alimentos?</h4>
+            </div>
+            <p>
+              Aunque la interfaz corre en el navegador web con HTML5/CSS/JS, el backend de modelado de gemelos digitales utiliza <strong>Python</strong> (con bibliotecas como <em>NumPy</em>, <em>SciPy</em> y <em>OpenCV</em>) para computar las ecuaciones diferenciales de transferencia de calor por convección forzada en intercambiadores de calor y ejecutar los algoritmos de visión artificial que alimentan las gafas de Realidad Aumentada.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-copy">
+            <p>&copy; 2026 XR Food Engineering. Desarrollado con enfoque de ingeniería de alimentos y tecnologías inmersivas.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#tecnologias">Tecnologías</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#gamificacion">Simulador</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+  </div>
+
+  <!-- SCRIPTS ORDENADOS -->
+  <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/game.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
